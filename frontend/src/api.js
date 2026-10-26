@@ -4,7 +4,7 @@
  * Supports both streaming (SSE) and synchronous endpoints.
  */
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://campus-regulations-assistant-backend.onrender.com';
 
 export async function fetchHealth() {
   const res = await fetch(`${API_BASE}/health`);
