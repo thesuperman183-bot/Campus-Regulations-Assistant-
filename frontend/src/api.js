@@ -100,7 +100,7 @@ export async function uploadDocument(file) {
   const formData = new FormData();
   formData.append('file', file);
 
-  const res = await fetch(`${API_BASE}/documents/upload`, {
+  const res = await fetch(`${API_BASE}/api/documents/upload`, {
     method: 'POST',
     body: formData,
   });
@@ -114,7 +114,7 @@ export async function uploadDocument(file) {
 }
 
 export async function loadSampleDocument() {
-  const res = await fetch(`${API_BASE}/documents/sample`, {
+  const res = await fetch(`${API_BASE}/api/documents/sample`, {
     method: 'POST',
   });
 
